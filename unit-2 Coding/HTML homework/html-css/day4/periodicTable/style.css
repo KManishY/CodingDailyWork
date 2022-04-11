@@ -1,0 +1,36 @@
+.div{
+    /* border: 2px solid black; */
+    height: 70px;
+    width: 2.6%;
+    margin: auto;
+    padding: 20px 10px;
+
+    
+}
+.Pdiv{
+    display: flex;
+    border: 2px solid black;
+    height: 200px;
+}
+.lineDiv {
+    border: 2px solid black;
+    height: 120px;
+    width: 2.6%;
+    padding: 2px 10px;
+}
+.inLine{
+    border: 2px solid black;
+    height: 20px;
+    padding: 2px 2px;
+
+}
+.inline{
+    border: 2px solid black;
+    height: 20px;
+    padding: 2px 2px;
+
+}
+#pink{
+    /* background-color: (rgb(118, 48, 61)); */
+    background-color: rgb(155, 67, 67);
+}

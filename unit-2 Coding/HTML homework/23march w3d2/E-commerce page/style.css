@@ -1,0 +1,51 @@
+ body{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+      #navbar{
+          width: 100%;
+          display: flex;
+          margin: 0px;
+          padding: 20px;
+          background-color: blue;
+          color: white;
+          justify-content: space-around;
+          cursor: pointer;
+      }
+
+      #navbar a{
+          text-decoration: none;
+          color: white;
+      }
+      #container{
+          width: 80%;
+          margin: auto;
+          display: grid;
+          grid-template-columns: repeat(4,1fr);
+          grid-template-columns: repeat(auto);
+          gap: 20px;
+
+      }
+      #signup-page{
+          width: 60%;
+          margin: auto;
+      }
+      #div1{
+          display: flex;
+          width: 80%;
+          /* margin: auto; */
+          justify-content: space-around;
+          /* border: 2px solid red; */
+          
+        }
+        .p1{
+          /* word-wrap: break-word; */
+          text-decoration: line-through;
+
+      }
+      /* login and signup */
+      .UserCre{
+          display: flex;
+      }

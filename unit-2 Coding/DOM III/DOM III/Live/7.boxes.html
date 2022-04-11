@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px;
+        gap: 20px;
+      }
+
+      #container > div {
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="container">
+      <div></div>
+      <div></div>
+      <div></div>
+      
+    </div> -->
+  </body>
+</html>
+
+<script>
+  // div-id container
+
+  // 4 divs
+
+  var parentBox = document.createElement("div");
+  parentBox.setAttribute("id", "container");
+
+  var div1 = document.createElement("div");
+  var div2 = document.createElement("div");
+  var div3 = document.createElement("div");
+
+  parentBox.append(div1, div2, div3);
+
+  document.querySelector("body").append(parentBox);
+</script>

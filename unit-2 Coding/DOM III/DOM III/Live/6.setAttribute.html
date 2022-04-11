@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .g-image {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  // setAttributes
+  //Syntax - setAttribute("attributeName","value")
+  //1. creating a tag - h1,h2,div,img,p
+  // 2. writing setAttribute
+  // 3. we need to append to the body
+
+  var image = document.createElement("img");
+  //   image.src =
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTPRiMEs-_5W8ToxTkjYJgSuo5fX1xSILPwg&usqp=CAU";
+
+  image.setAttribute(
+    "src",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTPRiMEs-_5W8ToxTkjYJgSuo5fX1xSILPwg&usqp=CAU"
+  );
+
+  image.setAttribute("alt", "google image");
+
+  //class,id -- attributes for every tag
+
+  image.setAttribute("class", "g-image image-chandra");
+
+//   image.setAttribute("id", "g-image");
+
+
+  document.querySelector("body").append(image);
+</script>

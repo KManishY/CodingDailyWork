@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *body{
+            width: 80%;
+        }
+        #container{
+            text-align: center;
+            /* width: 60%; */
+            height:auto;
+            margin: auto;
+            /* border: 2px solid green; */
+            /* display: grid; */
+            background-color: white;
+        }
+        #inner{
+            display: grid;
+            width: 60%;
+            margin: auto;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(1,auto);
+            gap: 40px;
+            box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+            /* margin-top: 30px; */
+        }
+    #container>div>div{
+        /* display: grid; */
+        box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+        /* border: 1px solid yellow; */
+        
+    }
+    p{
+        color: rgb(156, 151, 151);
+            width: 60%;
+            margin: auto;
+        }
+
+
+
+        /* medium */
+        @media only screen and (min-width: 421px) and (max-width: 780px){
+            #inner{
+                display: grid;
+                grid-template-columns: repeat(2,1fx);
+                grid-template-rows: repeat(3,auto);
+                gap: 20px;
+            }
+        }
+        @media only screen and (min-width: 70px) and (max-width: 420px){
+        .inner{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(4,auto);
+            height: 460px;
+            gap: 20px;
+            /* background-color: pink; */
+           }
+       }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 style="color: rgb(35, 35, 73); width:40%; margin:auto">Choose a plan that right for your business</h1>
+        <p>we collect reviews from our users so you can get an honest
+            opinion of what an experience with our website are really like!
+        </p>
+        <div id="inner">
+            <div>
+                <h3 style="color: rgb(35, 35, 73);">Starter plan</h3>
+                <h2 style="color: #6d7c22;">Free</h2>
+                <p><i>per month</i></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repudiandae?</p>
+                    <button style="border-radius: 10px;color: blue; border:1px solid blue; text-align: center; height: 40px;width: 150px;">Start Now</button>
+                
+            </div>
+            <div> <h3 style="color: rgb(35, 35, 73);">Starter plan</h3>
+                <h2 style="color: #e93e55;">Free</h2>
+                <p><i>per month</i></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repudiandae?</p>
+                    <button style="border-radius: 10px;background-color: blue;color: white; border:1px solid blue; text-align: center; height: 40px;width: 150px;">Start Now</button>
+                </div>
+            <div>
+                <h3 style="color: rgb(35, 35, 73);">Starter plan</h3>
+                <h2 style="color: #358be0;">Free</h2>
+                <p><i>per month</i></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repudiandae?</p>
+                    <button style="margin-bottom: 10px; border-radius: 10px; color: blue; border:1px solid blue; text-align: center; height: 40px;width: 150px;">Start Now</button>
+                
+            </div>
+        </div>
+
+        
+    </div>
+    
+    
+    
+</body>
+</html>

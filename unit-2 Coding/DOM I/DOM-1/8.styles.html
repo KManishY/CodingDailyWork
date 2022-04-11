@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* h1 {
+        background-color: teal;
+      } */
+
+      button {
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="masai">Masai school</h1>
+
+    <button id="btn" onClick="completeFunction()">Mark as Completed</button>
+  </body>
+</html>
+
+<script>
+  document.getElementById("masai").style.backgroundColor = "teal";
+
+  function completeFunction() {
+    document.getElementById("btn").style.backgroundColor = "green";
+    document.getElementById("btn").innerText = "Completed";
+    document.getElementById("btn").style.color = "white";
+    document.getElementById("btn").style.fontSize = "40px";
+  }
+
+  
+
+
+
+
+</script>

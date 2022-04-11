@@ -1,0 +1,21 @@
+.container{
+    width: 80%;
+    height: 40vh;
+    margin: auto;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+
+}
+.items{
+    width:50px;
+    height: 50px;
+    border: 1px solid red;
+    margin:8px;
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    /* display: flex; */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        grid-gap: 30px;
+      }
+
+      p {
+        font-size: 40px;
+        color: red;
+      }
+
+      #container > div {
+        background-color: teal;
+      }
+
+      @media only screen and (min-width: 421px) and (max-width: 780px) {
+        #container {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(5, 200px);
+        }
+
+        p {
+          font-size: 40px;
+          color: teal;
+        }
+      }
+
+      @media only screen and (min-width: 70px) and (max-width: 420px) {
+        #container {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(9, 200px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- <p>I am paragraph</p> -->
+  </body>
+</html>

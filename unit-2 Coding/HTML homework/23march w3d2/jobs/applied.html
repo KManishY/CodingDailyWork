@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="links">
+        <div><a href="index.html">Home</a></div>
+        <div><a href="applied.html">Applied Jobs</a></div>
+        <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+    
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Job Applied</th>
+                    <th>Expected Package</th>
+                    <th>Bookmarks</th>
+                </tr>
+            </thead>
+            <tbody id="body"></tbody>
+        </table>
+    </main>
+    <select onchange="handleNameSort()" id="sortName">
+        <option value="" >Sort by name</option>
+        <option value="ascending">z-a</option>
+        <option value="decending">a-z</option>
+    </select> 
+              
+    <select onchange="handleSalerySort()" id="sortSalery">
+        <option value="" >Sort by Package</option>
+        <option value="Highest">max-min</option>
+        <option value="Lowest">min-max</option>
+    </select> 
+     <select name="role" id="role" onchange="handleRoleSort()">
+            <option value="FSD">FSD</option>
+            <option value="Backend">Backend</option>
+            <option value="Frontend">Frontend</option>
+        </select>
+
+
+
+
+    
+</body>
+</html>
+<script>
+    var appliedJobs=JSON.parse(localStorage.getItem("jobApplication"));
+    var bookmark =JSON.parse(localStorage.getItem("bookmarkObj")) || []
+    console.log(appliedJobs)
+
+    window.addEventListener("load",function(){
+        displayData(appliedJobs)
+    })
+
+    //sort by name start
+    function handleNameSort(){
+        console.log("iside the nameSort")
+        let selected=document.querySelector("#sortName").value;
+        console.log(selected);
+
+        if (selected == "ascending") {
+            appliedJobs.sort(function(a,b) {
+              if(a.name>b.name)return 1;
+              if(a.name<b.name) return -1;
+              return 0; 
+            })
+            // console.log(appliedJobs);
+            // localStorage.setItem("jobApplication",JSON.stringify(appliedJobs));
+            // window.location.reload();
+            displayData(appliedJobs)
+        }
+        if(selected=="decending"){
+            appliedJobs.sort(function(a,b){
+                if(a.name < b.name) return 1;
+                if(a.name > b.name) return -1;
+                return 0;
+            })
+            // console.log(appliedJobs)
+            // localStorage.setItem("jobApplication", JSON.stringify(appliedJobs));
+            // window.location.reload();
+            displayData(appliedJobs)
+        }
+        
+    }
+    //sort by name end
+
+
+    //sort by salery start
+    function handleSalerySort(){
+        let selected =document.querySelector("#sortSalery").value
+        console.log(selected);
+        if(selected= "highest"){
+            appliedJobs.sort(function(a,b){
+                return b.salery-a.salery;
+            });
+            displayData(appliedJobs)
+        }
+        if(salected ="lowest"){
+            appliedJobs.sort(function(a,b){
+                return a.salery-b.salery;
+            })
+            displayData(appliedJobs);
+
+        }
+    }
+    //sort by salery end 
+
+
+    //sort by role start
+    function handleRoleSort(){
+        let selected =document.querySelector("#role").value
+       var filteredList = appliedJobs.filter(function (elem) {
+           console.log(selected)
+           return elem.role == selected;
+           
+       });
+       displayData(filteredList);
+    }
+    //sort by role end
+
+    function displayData(appliedJobs){
+        document.querySelector("tbody").innerHTML="";
+        appliedJobs.map(function(elem){
+            var row = document.createElement("tr");
+            
+            var td1 =document.createElement("td")
+            td1.innerText=elem.name;
+            var td2 =document.createElement("td");
+            td2.innerText=elem.email;
+            var td3 =document.createElement("td")
+            td3.innerText=elem.role;
+            var td4 =document.createElement("td");
+            td4.innerText=elem.salery;
+            
+            
+            var td5 =document.createElement("td");
+            td5.innerText="Click to Bookmark"
+            td5.style.color="blue";
+            td5.style.cursor="pointer";
+            td5.addEventListener("click",function(){
+                addToBookmark(elem);
+            })
+            row.append(td1,td2,td3,td4,td5);
+            document.querySelector("tbody").append(row);
+        })
+    }
+
+    function addToBookmark(elem){
+        console.log(elem)
+        bookmark.push(elem)
+        localStorage.setItem("bookmarkObj",JSON.stringify(bookmark))
+    }
+</script>

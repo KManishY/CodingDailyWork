@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: flex;
+      }
+
+      #container > div {
+        background-color: teal;
+        width: 150px;
+        height: 150px;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var boxes = document.querySelectorAll("#container>div");
+  console.log(boxes);
+
+  //      boxes[0].addEventListener("click",myFunction)
+  //      boxes[1].addEventListener("click",myFunction)
+  //      boxes[2].addEventListener("click",myFunction)
+  //      boxes[3].addEventListener("click",myFunction)
+
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener("click", myFunction);
+  }
+
+  function myFunction() {
+    console.log("clicked one of the box");
+    console.log(event.target.innerText);
+  }
+
+  var y = eval(100+200-400*2+4);
+  console.log(y);
+</script>

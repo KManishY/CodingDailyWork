@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1>I am heading 1</h1>
+      <h2>I am heading 2</h2>
+
+      <div>I am div</div>
+
+      <img src="" alt="">
+
+      <p>I am paragraph</p> -->
+  </body>
+</html>
+
+<script>
+  //createElement --> creating a tag
+  //1. creating a tag - h1,h2,div,img,p
+  // 2. writing innerText
+  // 3. we need to append to the body
+
+  var heading = document.createElement("h1");
+  heading.innerText = "I am heading 1";
+
+  var box = document.createElement("div");
+  box.innerText = "I am div";
+
+  var para = document.createElement("p");
+  para.innerText = " i am paragraph";
+
+  
+
+  document.querySelector("body").append(heading, box, para);
+
+</script>

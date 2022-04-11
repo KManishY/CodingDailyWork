@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <style>
+      h3{
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+        color: #f84364;
+        margin-bottom: 80px;
+      }
+      #container{
+        width: 60%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        gap: 40px;
+        
+      }
+      #container>div{
+       border: 2px solid pink; 
+       display: flex;
+       cursor: pointer;
+       text-align: center;
+      }
+      #container>div>div{
+        margin-left: 20px;
+        
+      }
+      button{
+        padding: 10px 15px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: #f84364;
+        color: white;
+        text-align: center;
+      }
+      img{
+        width: 150px;
+        height: 150px;
+        /* border-radius: 5px; */
+      }
+    
+
+      /* Medium screens */
+      @media only screen and (min-width: 421px) and (max-width: 780px) {
+        #container{
+        grid-template-rows: auto;
+        
+      }
+      #container>div{
+        flex-direction: column;
+        padding: 20px;    
+      }
+      p{
+        text-align: center;
+      }
+     
+      
+      img{   
+        border-radius: 60px;
+      }
+      h3{
+        text-align: center;
+      }
+
+        
+      }
+      
+      /* small screens */
+      @media only screen and (min-width: 70px) and (max-width: 420px) {
+        #container>div{
+        flex-direction: column;
+        }
+        img{
+          border-radius: 50%;
+          
+        }
+        #container{
+          grid-template-rows: auto;
+          grid-template-columns: repeat(1,1fr);
+          margin-left: px;
+        
+        }
+        #container>div{
+          padding: 20px;
+          /* margin-left:20px ; */
+          margin: auto;
+          
+          
+        }
+        p{
+          text-align: center;
+        }
+        h1{
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- image link - 
+      https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg -->
+    <h1>Just movies</h1>
+    <div id="container">
+      <div>
+       <div>
+         <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt="">
+       </div>
+       <div>
+         <h3>RADHE SHAYAM</h3>
+         <p> Releasing on 11th march</p>
+         <button>book</button>
+       </div>
+      </div>
+      <div>
+        <div>
+          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt="">
+        </div>
+        <div>
+          <h3>RADHE SHAYAM</h3>
+          <p> Releasing on 11th march</p>
+          <button>book</button>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt="">
+        </div>
+        <div>
+          <h3>RADHE SHAYAM</h3>
+          <p> Releasing on 11th march</p>
+          <button>book</button>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt="">
+        </div>
+        <div>
+          <h3>RADHE SHAYAM</h3>
+          <p> Releasing on 11th march</p>
+          <button>book</button>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt="">
+        </div>
+        <div>
+          <h3>RADHE SHAYAM</h3>
+          <p> Releasing on 11th march</p>
+          <button>book</button>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/radhe-shyam-et00135230-07-03-2022-04-16-56.jpg" alt="">
+        </div>
+        <div>
+          <h3>RADHE SHAYAM</h3>
+          <p> Releasing on 11th march</p>
+          <button>book</button>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>

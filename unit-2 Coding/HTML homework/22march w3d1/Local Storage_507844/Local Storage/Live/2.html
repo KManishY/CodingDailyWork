@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  // strings
+  //localStorage.setItem("key","value")
+  localStorage.setItem("name1", "shadik");
+
+  localStorage.setItem("name2", "brijesh");
+
+  //localStorage.getItem("key")
+  var name1 = localStorage.getItem("name1");
+  console.log(name1);
+
+  var name2 = localStorage.getItem("name2");
+  console.log(name2);
+
+  // numbers
+  localStorage.setItem("mobilenum", "99999999");
+
+  localStorage.setItem("cvv", 594);
+
+  var cvvNum = localStorage.getItem("cvv");
+  console.log(cvvNum);
+
+  // arrays
+  var names = ["rovin", "Banik", "aditya"];
+  localStorage.setItem("namesArray", JSON.stringify(names));
+
+  //JSON- universal data format
+  //JSON - c,c++,java,
+
+  // 1st friend - backend engg -- java -- json
+  // 2nd friend -- frontend engg -- js
+
+  var namesFromStorage = JSON.parse(localStorage.getItem("namesArray"));
+  console.log(namesFromStorage);
+
+  //1. whenever you want to store arrays in LS--stringify
+  //2. whenever you want to get array from LS- parse
+
+  var obj = { name: "sourav", place: "banglore" };
+
+  localStorage.setItem("myObj", JSON.stringify(obj));
+
+  var resultObj = JSON.parse(localStorage.getItem("myObj"));
+  console.log(resultObj);
+
+  var cartData = [
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$25.00",
+      strikedOffPrice: "$95.00",
+    },
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$35.00",
+      strikedOffPrice: "$100.00",
+    },
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$35.00",
+      strikedOffPrice: "$100.00",
+    },
+    {
+      imgUrl:
+        "https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+      name: "LATEST MEN’S SNEAKER",
+      price: "$35.00",
+      strikedOffPrice: "$100.00",
+    },
+  ];
+
+  
+  localStorage.setItem("cartItems",JSON.stringify(cartData))
+
+  var dataFromStorage= JSON.parse(localStorage.getItem("cartItems"))
+  console.log(dataFromStorage)
+</script>

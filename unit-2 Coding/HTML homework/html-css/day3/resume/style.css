@@ -1,0 +1,19 @@
+.outer-box {
+  border: 2px solid black;
+  width: 60%;
+  height: auto;
+  margin: auto;
+  padding: 15px;
+
+  /* text-align: center; */
+}
+.nam {
+  text-align: center;
+  border-bottom: 2px solid blue;
+}
+.address {
+  text-align: right;
+}
+h2{
+    color: blue;
+}

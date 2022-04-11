@@ -1,0 +1,40 @@
+<!-- It should take the gender (dropdown) and year of birth as input and show an alert if the user is of the valid legal age to get married or not -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <input id="year" type="number" placeholder="enter YOB" />
+    <button>Get Eligibility</button>
+  </body>
+</html>
+
+<script>
+  document.querySelector("button").addEventListener("click", getEligibility);
+
+  function getEligibility() {
+    var gender = document.querySelector("#gender").value;
+    var yob = document.querySelector("#year").value;
+
+    // 18 is age for women
+    var age = 2022 - yob;
+    console.log(age);
+
+    if ((age >= 21 && gender == "male") || (age > 18 && gender == "female")) {
+      alert("eligible");
+    } else {
+      alert("not eligible");
+    }
+
+    //
+  }
+</script>

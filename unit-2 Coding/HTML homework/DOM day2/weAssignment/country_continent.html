@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="continent_select">
+        <option value="India" id="asia">India</option>
+        <option value="United States of America" id="">United States of America</option>
+        <option value="China" id="asia">China</option>
+        <option value="Nepal" id="asia">Nepal</option>
+        <option value="Australia" id="Australia">Australia</option>
+        <option value="France" id="">France</option>
+        <option value="Germany" id="">Germany</option>
+        <option value="South Africa" id="">South Africa</option>
+        <option value="Nigeria" id="">Nigeria</option>
+        <option value="Mexico" id="">Mexico</option>
+        <option value="Argentina" id="">Argentina</option>
+        <option value="Brazil" id="">Brazil</option>
+        <option value="Canada" id="">Canada</option>
+        <option value="Singapore" id="">Singapore</option>
+        <option value="Sweden" id="">Sweden</option>
+    </select>
+    <button>find continent</button>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",continent);
+    function continent(){
+        var countryContinent=document.querySelector("#continent_select").value
+        console.log(countryContinent);
+        switch(countryContinent){
+            case "India":
+            case "China":
+            case "Nepal":
+            case "singapure":
+                alert("asia");
+                break;
+            
+        }
+    }
+
+
+</script>

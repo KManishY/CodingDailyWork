@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .navigation{
+            /* border: 2px solid red; */
+            width: 80%;
+            height: 80px;
+            margin: auto;
+            background-color: yellow;
+        }
+        .a{
+            background-color: red;
+        }
+        .b{
+            background-color: green;
+        }
+        .c{
+            background-color: blue;
+        }
+        .d{
+            background-color: gray;
+        }
+        
+        .inner{
+            width: 80%;
+            height: 100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(1,100px);
+            gap: 20px;
+            /* border: 2px solid red; */
+            margin-top: 12px;
+            /* background-color: whitesmoke; */
+            /* border: 1px solid green; */
+        }
+        .inner>div{
+            border: 2px solid rebeccapurple ;
+        }
+        /* medium */
+       @media only screen and (min-width:421px) and (max-width:780px){
+           .inner{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,100px);
+            height: 220px;
+           }
+        .a{
+            background-color: red;
+        }
+
+               
+        .b{
+            background-color: green;
+            grid-area: 2,1,3,2;
+        }
+        .c{
+            background-color: blue;
+            grid-area: 1,2,1,3;
+        }
+        .d{
+            background-color: gray;
+            grid-area: 2,2,2,3;
+        }
+        
+       }
+       /* small */
+       @media only screen and (min-width: 70px) and (max-width: 420px){
+        .inner{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(4,100px);
+            height: 460px;
+            /* background-color: pink; */
+           }
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="navigation"><p>Navigation</p> </div>
+    
+       <div class="inner">
+            <div class="a"><p>box 1</p></div>
+            <div class="b"><p>box 2</p></div>
+            <div class="c"><p>box 3</p></div>
+            <div class="d"><p>box 4</p></div>
+        </div>
+        
+       
+</body>   
+</html>

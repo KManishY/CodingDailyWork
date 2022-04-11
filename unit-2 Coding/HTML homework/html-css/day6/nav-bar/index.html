@@ -1,0 +1,58 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        .container {
+            width: 95%;
+            height: 100px;
+            background-color: #262626;
+            margin: auto;
+            display: flex;
+        }
+
+        .container>div:nth-child(1) {
+            width: 60%;
+            height: 100%;
+            font-size: 25px;
+            color: white;
+            padding: 30px;
+        }
+
+        .container>div:nth-child(2) {
+            color: white;
+            width: 40%;
+            height: 100%;
+            font-size: 25px;
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        select {
+            color: white;
+            background-color: transparent;
+            padding: 1px;
+            border: 0;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>MEGAWIDTH</div>
+        <div>
+            <div>Home</div>
+            <div>About</div>
+            <div>Blog</div>
+            <div>
+                <select name="" id="">
+                    <option>Page</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

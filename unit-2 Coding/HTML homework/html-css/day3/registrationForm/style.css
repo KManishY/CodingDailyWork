@@ -1,0 +1,26 @@
+.outer-box{
+    /* border: 2px solid black; */
+    width: 80%;
+    height: 100%;
+    display: flex;
+    padding:60px;
+
+    margin: auto;
+}
+.box{
+    width: 28%;
+    height: auto;
+    /* padding: 10px; */
+    /* border: 2px solid blue; */
+    margin: auto;
+    /* background-color: black; */
+}
+.box1{
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+}
+.regis{
+    background-color: black;
+    color: white;
+}

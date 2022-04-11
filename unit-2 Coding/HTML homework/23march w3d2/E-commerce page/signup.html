@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div  id="navbar">
+        <div><a href="index.html">Homepage</a></div>
+        <div><a href="mens.html">Mens</a></div>
+        <div><a href="womens.html">Womens</a></div>
+        <div><a href="signup.html">Signup</a></div>
+        <div><a href="login.html">Login</a></div>
+        <div><a href="cart.html">Cart</a></div>
+
+
+    </div>
+    <div class="signup-page">
+        <form>
+            <input type="text" placeholder="enter your name " id="name">
+            <input type="email" placeholder="email" id="email">
+            <input type="password" placeholder="password" id="pass">
+            <input type="submit">
+        </form>
+
+    </div>
+   
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",signUpFun);
+    var userData= JSON.parse(localStorage.getItem("userCreds"))||[];
+
+    function signUpFun(){
+        event.preventDefault();
+        var userObj={
+            userName : document.querySelector("#name").value,
+            email : document.querySelector("#email").value,
+            password:document.querySelector("#pass").value
+
+        }
+        console.log(userObj);
+        userData.push(userObj);
+        localStorage.setItem("userCreds", JSON.stringify(userData))
+    }
+
+</script>

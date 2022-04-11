@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <!-- <h1 id="timer"></h1>
+   <button onclick="stop()">stop</button> -->
+<h1>store url for make crousel</h1>
+   <input type="url" id="url">
+      <button onclick="storeImage()">submit URL</button>
+</body>
+</html>
+<script>
+function storeImage(){
+   let image = document.getElementById('url').value;
+   let img = JSON.parse(localStorage.getItem("images")) || [];
+   img.push(image);
+
+   localStorage.setItem("images",JSON.stringify(image));
+   // document.getElementById('url').value=null;
+}
+
+
+
+
+
+// Asyncheronous execution
+//setTimeOut
+// let h1 = document.getElementById("timer");
+// var i=0;
+// let id=setInterval(function(){
+//    h1.innerText =i;
+// if(i==60){
+//    i=0;
+// }
+//    i++;
+   
+// },100);
+
+// function stop(){
+//    clearInterval(id);
+// }
+
+
+
+
+
+
+
+
+  
+</script>

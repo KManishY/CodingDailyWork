@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        background-color: red;
+      }
+
+      .para {
+        background-color: teal;
+      }
+
+      /* 100 */
+      #paragraph {
+        background-color: yellow;
+      }
+
+      /* 100+1=101 */
+      #container > p {
+        background-color: pink;
+      }
+
+      /* 100+1 = 101 */
+      p#paragraph {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p id="paragraph" class="para">I am paragraph</p>
+    </div>
+  </body>
+</html>
+
+<!-- SICTU
+
+S- 1000
+I- 100
+C- 10
+T- 1
+U- 0 -->

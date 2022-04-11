@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="links">
+        <div><a href="index.html">Home</a></div>
+        <div><a href="applied.html">Applied Jobs</a></div>
+        <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+    
+    <form action="" id="form">
+        <h2>Enter your Application Details</h2>
+        <input type="text" placeholder="Enter name" name ="name" id="name">
+        <input type="text" placeholder="Enter Email" name = "email" id="email">
+        <select name="role" id="role">
+            <option value="FSD">FSD</option>
+            <option value="Backend">Backend</option>
+            <option value="Frontend">Frontend</option>
+        </select>
+        <input type="number" id="salery" placeholder="Expected package" name="number">
+        <input type="submit" name="submit" value="submit" id="submit">
+    </form>
+    
+    
+</body>
+</html>
+<script>
+    document.querySelector("#form").addEventListener("submit",myFunction);
+    var jobArr=JSON.parse(localStorage.getItem("jobApplication")) || [];
+    function myFunction(){
+        event.preventDefault();
+        var jobObj={
+            name: document.querySelector("#name").value,
+            email:document.querySelector("#email").value,
+            role:document.querySelector("#role").value,
+            salery: document.querySelector("#salery").value
+            
+        };
+        jobArr.push(jobObj);
+        console.log(jobArr);
+        localStorage.setItem("jobApplication",JSON.stringify(jobArr));
+        document.querySelector("#name").value="";
+        document.querySelector("#email").value="";
+        document.querySelector("#salery").value="";
+
+    }
+</script>
